@@ -1,0 +1,48 @@
+[
+  {
+    "_id": "3be01bc0-6735-11e7-aef7-396bc4e98e63",
+    "_type": "search",
+    "_source": {
+      "title": "Suricata - Alerts",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "alert.category",
+        "alert.severity",
+        "alert.signature",
+        "geoip.location",
+        "geoip.country_code2",
+        "geoip.country_name",
+        "ids_rule_type"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ad96b120-f8c5-11e8-8c93-610da4d90ab8\",\"highlightAll\":true,\"version\":true,\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"logstash-*\",\"type\":\"phrase\",\"key\":\"event_type\",\"value\":\"alert\",\"disabled\":false,\"alias\":null,\"params\":{\"query\":\"alert\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"event_type\":{\"query\":\"alert\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"ad96b120-f8c5-11e8-8c93-610da4d90ab8\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"type\",\"value\":\"suricataIDPS\",\"params\":{\"query\":\"suricataIDPS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"type\":{\"query\":\"suricataIDPS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\",\"default_field\":\"*\"}},\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "d43988c0-67a3-11e7-aef7-396bc4e98e63",
+    "_type": "search",
+    "_source": {
+      "title": "Suricata - Signatures",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "alert.signature"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"ad96b120-f8c5-11e8-8c93-610da4d90ab8\",\"highlightAll\":true,\"version\":true,\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"logstash-*\",\"key\":\"event_type\",\"negate\":false,\"type\":\"phrase\",\"value\":\"alert\",\"params\":{\"query\":\"alert\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"event_type\":{\"query\":\"alert\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"ad96b120-f8c5-11e8-8c93-610da4d90ab8\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"type\",\"value\":\"suricataIDPS\",\"params\":{\"query\":\"suricataIDPS\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"type\":{\"query\":\"suricataIDPS\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\",\"default_field\":\"*\"}}}}"
+      }
+    }
+  }
+]
